@@ -128,8 +128,9 @@ public:
 };
 
 int main() {
-    ofstream ofs("crossing_probs.csv");
-    ofs << "r,Lx,Ly,P_spin,P_fk" << endl;
+    string filename = "crossing_probs_L" + to_string(min_L) + ".csv";
+    ofstream ofs(filename);
+    ofs << "L_min,r,Lx,Ly,P_spin,P_fk" << endl;
 
     auto start = chrono::high_resolution_clock::now();
     
@@ -161,7 +162,7 @@ int main() {
         double p_fk = (double)fk_cnt / n_samples;
 
         cout << "r=" << r << " (" << Lx << "x" << Ly << ") -> P_spin: " << p_s << ", P_fk: " << p_fk << endl;
-        ofs << r << "," << Lx << "," << Ly << "," << p_s << "," << p_fk << endl;
+        ofs << min_L << "," << r << "," << Lx << "," << Ly << "," << p_s << "," << p_fk << endl;
     }
 
     ofs.close();
