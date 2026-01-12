@@ -1,0 +1,2 @@
+Target dependency graph (1 target)
+Target 'Ising_rectangle_crossing' in project 'Ising_rectangle_crossing' (no dependencies)

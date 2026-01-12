@@ -1,0 +1,58 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "856e00f4963636db0e85130adb3f5027fee028e8c68d44b9b49ea683d0bf723d"
+    }
+  ],
+  "containerPath" : "/Users/akihisatateishi/Library/CloudStorage/Dropbox/AT_sub-main/Xcode/Ising_rectangle_crossing/Ising_rectangle_crossing.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx15.2",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/akihisatateishi/Library/CloudStorage/Dropbox/AT_sub-main/Xcode/Ising_rectangle_crossing/DerivedData/Ising_rectangle_crossing/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/akihisatateishi/Library/CloudStorage/Dropbox/AT_sub-main/Xcode/Ising_rectangle_crossing/DerivedData/Ising_rectangle_crossing/Build/Products",
+      "derivedDataPath" : "/Users/akihisatateishi/Library/CloudStorage/Dropbox/AT_sub-main/Xcode/Ising_rectangle_crossing/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/akihisatateishi/Library/CloudStorage/Dropbox/AT_sub-main/Xcode/Ising_rectangle_crossing/DerivedData/Ising_rectangle_crossing/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/akihisatateishi/Library/CloudStorage/Dropbox/AT_sub-main/Xcode/Ising_rectangle_crossing/DerivedData/Ising_rectangle_crossing/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/akihisatateishi/Library/CloudStorage/Dropbox/AT_sub-main/Xcode/Ising_rectangle_crossing/DerivedData/Ising_rectangle_crossing/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
