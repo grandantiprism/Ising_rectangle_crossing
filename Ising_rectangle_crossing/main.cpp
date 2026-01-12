@@ -5,8 +5,17 @@
 #include <numeric>
 #include <fstream>
 #include <iomanip>
+#include <algorithm>
 
 using namespace std;
+
+const int min_L = 64;           // 短辺の最小サイズ
+const int n_samples = 10000;      // 各アスペクト比でのサンプル数
+const double beta_c = 0.44068679350977147533;     // (1/2) * log(1 + sqrt(2))
+
+// 調査するアスペクト比 r = Lx / Ly のリスト
+vector<double> r_list = {0.25, 0.5, 0.8, 1.0, 1.25, 1.5, 2.0, 3.0, 4.0};
+
 
 // 高速な連結判定のためのUnion-Find構造体
 struct DSU {
@@ -38,9 +47,8 @@ class IsingSimulation {
     int get_idx(int x, int y) const { return y * Lx + x; }
 
 public:
-    IsingSimulation(int lx, int ly, double T, int seed)
+    IsingSimulation(int lx, int ly, double beta, int seed)
         : Lx(lx), Ly(ly), gen(seed), dist(0.0, 1.0) {
-        double beta = 1.0 / T;
         p_bond = 1.0 - exp(-2.0 * beta);
         spins.assign(Lx * Ly, 0);
         
@@ -120,16 +128,11 @@ public:
 };
 
 int main() {
-    const int min_L = 64;           // 短辺の最小サイズ
-    const int n_samples = 5000;      // 各アスペクト比でのサンプル数
-    const double Tc = 2.269185;     // 2 / log(1 + sqrt(2))
-    
-    // 調査するアスペクト比 r = Lx / Ly のリスト
-    vector<double> r_list = {0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 2.0, 3.0, 4.0};
-
     ofstream ofs("crossing_probs.csv");
     ofs << "r,Lx,Ly,P_spin,P_fk" << endl;
 
+    auto start = chrono::high_resolution_clock::now();
+    
     cout << fixed << setprecision(3);
     for (double r : r_list) {
         int Lx, Ly;
@@ -141,7 +144,7 @@ int main() {
             Ly = (int)round(min_L / r);
         }
 
-        IsingSimulation sim(Lx, Ly, Tc, 42);
+        IsingSimulation sim(Lx, Ly, beta_c, 42);
 
         // 熱浴
         for(int i=0; i<1000; ++i) sim.update_wolff();
@@ -162,6 +165,27 @@ int main() {
     }
 
     ofs.close();
+    
+    auto end = chrono::high_resolution_clock::now();
+    chrono::duration<double> elapsed = end - start;
+
+    // ログファイルへの追記
+    ofstream log_file("log.txt", ios::app);
+    if (log_file) {
+        // 現在時刻の取得（オプション）
+        auto now = chrono::system_clock::to_time_t(chrono::system_clock::now());
+        
+        log_file << "--- Simulation Log ---" << endl;
+        log_file << "Date: " << ctime(&now); // 実行日時
+        log_file << "L_min: " << min_L << ", n_samples: " << n_samples << endl;
+        log_file << "Num_r: " << r_list.size() << " (" << *std::min_element(r_list.begin(), r_list.end()) << " to " << *std::max_element(r_list.begin(), r_list.end()) << ")" << endl;
+        log_file << "Elapsed time: " << fixed << setprecision(2) << elapsed.count() << " seconds" << endl;
+        log_file << "-----------------------" << endl << endl;
+        log_file.close();
+    }
+
+    cout << "Simulation completed in " << elapsed.count() << " seconds." << endl;
+    
     cout << "\nResults saved to crossing_probs.csv" << endl;
 
     return 0;

@@ -6,6 +6,48 @@
 	<integer>11</integer>
 	<key>logs</key>
 	<dict>
+		<key>5ED8F711-C472-4FC7-A826-3197F9539830</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>5ED8F711-C472-4FC7-A826-3197F9539830.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Ising_rectangle_crossing project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Ising_rectangle_crossing</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Ising_rectangle_crossing</string>
+			<key>timeStartedRecording</key>
+			<real>789892847.14951706</real>
+			<key>timeStoppedRecording</key>
+			<real>789892848.806867</real>
+			<key>title</key>
+			<string>Build Ising_rectangle_crossing</string>
+			<key>uniqueIdentifier</key>
+			<string>5ED8F711-C472-4FC7-A826-3197F9539830</string>
+		</dict>
 		<key>7789525D-633F-4040-BD95-890701DB8B44</key>
 		<dict>
 			<key>className</key>
@@ -47,6 +89,48 @@
 			<string>Build Ising_rectangle_crossing</string>
 			<key>uniqueIdentifier</key>
 			<string>7789525D-633F-4040-BD95-890701DB8B44</string>
+		</dict>
+		<key>B35A91ED-47DD-491E-8BC6-E7362987BD3B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B35A91ED-47DD-491E-8BC6-E7362987BD3B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Ising_rectangle_crossing project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Ising_rectangle_crossing</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build Ising_rectangle_crossing</string>
+			<key>timeStartedRecording</key>
+			<real>789891694.81782997</real>
+			<key>timeStoppedRecording</key>
+			<real>789891700.11217797</real>
+			<key>title</key>
+			<string>Build Ising_rectangle_crossing</string>
+			<key>uniqueIdentifier</key>
+			<string>B35A91ED-47DD-491E-8BC6-E7362987BD3B</string>
 		</dict>
 	</dict>
 </dict>

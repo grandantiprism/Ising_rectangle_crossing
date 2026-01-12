@@ -1,0 +1,7 @@
+--- Simulation Log ---
+Date: Mon Jan 12 15:49:03 2026
+L_min: 64, n_samples: 10000
+Num_r: 9 (0.25 to 4)
+Elapsed time: 494.48 seconds
+-----------------------
+
